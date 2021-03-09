@@ -8,7 +8,6 @@
 import Cocoa
 
 class TimerController: NSViewController {
-    
     @IBOutlet var tfSeconds: NSTextField!
     @IBOutlet var tfMinutes: NSTextField!
     

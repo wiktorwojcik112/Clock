@@ -145,7 +145,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="279"/>
+            <point key="canvasLocation" x="75" y="344"/>
         </scene>
         <!--Alert Controller-->
         <scene sceneID="nyq-7x-OOH">

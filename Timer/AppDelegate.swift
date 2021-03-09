@@ -13,7 +13,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let installedVersion = 8
     
     @IBAction func checkForNewVersion(_ sender: NSMenuItem) {
-        
         if let url = URL(string: "https://wiktor.thedev.id/ClockVersion.txt") {
             do {
                 let currentVersionString = try String(contentsOf: url)

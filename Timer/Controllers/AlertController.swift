@@ -8,7 +8,6 @@
 import Cocoa
 
 class AlertController: NSViewController {
-
     var timeHasEnded = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { [self] timer in }
     
     @IBAction func OK(_ sender: NSButton) {

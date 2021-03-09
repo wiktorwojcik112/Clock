@@ -19,7 +19,6 @@ class StopwatchController: NSViewController {
     var endrun = 0
     var timer = Timer()
     var wasStopped = false
-    
     var isActive = false;
     
     @IBAction func activate(_ sender: NSButton) {
