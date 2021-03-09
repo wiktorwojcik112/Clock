@@ -145,7 +145,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="233.5"/>
+            <point key="canvasLocation" x="75" y="279"/>
         </scene>
         <!--Alert Controller-->
         <scene sceneID="nyq-7x-OOH">
@@ -311,8 +311,9 @@ DQ
                             <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="Bjw-JV-rTL"/>
                             <touchBarItem id="2aO-Jw-yn4">
                                 <viewController key="viewController" id="huD-Uj-AZZ">
-                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DP1-WM-Us0">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DP1-WM-Us0">
                                         <rect key="frame" x="7" y="-5" width="90" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="Start/Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5w0-Wb-96Y">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
@@ -325,8 +326,9 @@ DQ
                             </touchBarItem>
                             <touchBarItem id="3WB-Io-BGg">
                                 <viewController key="viewController" id="xYe-Sn-ckS">
-                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iiS-yj-hPy">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iiS-yj-hPy">
                                         <rect key="frame" x="7" y="-5" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ajn-Lb-g3u">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
@@ -503,8 +505,9 @@ DQ
                             <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="btS-Ow-aQp"/>
                             <touchBarItem id="Z7E-gH-7JE">
                                 <viewController key="viewController" id="4Ap-Pr-2VB">
-                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mgi-ff-NoX">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mgi-ff-NoX">
                                         <rect key="frame" x="7" y="-5" width="90" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="Start/Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="L1A-JS-aYS">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
@@ -517,8 +520,9 @@ DQ
                             </touchBarItem>
                             <touchBarItem id="ZtP-J8-tAJ">
                                 <viewController key="viewController" id="Uys-WA-zzk">
-                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3jR-5a-sMe">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3jR-5a-sMe">
                                         <rect key="frame" x="7" y="-5" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mKQ-HE-zP6">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" usesAppearanceFont="YES"/>
