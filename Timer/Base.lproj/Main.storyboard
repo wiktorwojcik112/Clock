@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="17008"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="the Touch Bar" minToolsVersion="8.1" minSystemVersion="10.12.2" requiredIntegratedClassName="NSTouchBar"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="Clock" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Clock" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About Clock" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Check for updates..." id="glU-A3-R2p">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="checkForNewVersion:" target="Ady-hI-5gd" id="Jrg-ng-36u"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Services" id="NMo-om-nkz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                                        <menuItem title="Hide Clock" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit Clock" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Window" id="aUF-d1-5bR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
+                                    <items>
+                                        <menuItem title="Enter Full Screen" keyEquivalent="f" id="6Gn-Cz-l38">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="toggleFullScreen:" target="Ady-hI-5gd" id="mNh-cs-ti5"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                            <connections>
+                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Zoom" id="R4o-n2-Eq4">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Close" keyEquivalent="w" id="dHk-1f-qFz">
+                                            <connections>
+                                                <action selector="performClose:" target="Ady-hI-5gd" id="97T-Pu-aqk"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
+                                        <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="DRN-fu-gQh"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Help" id="wpr-3q-Mcd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
+                                    <items>
+                                        <menuItem title="Clock Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                            <connections>
+                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Clock" customModuleProvider="target"/>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="Clock" separatorStyle="shadow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="239" width="480" height="227"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="480" height="227"/>
+                        <value key="maxSize" type="size" width="480" height="227"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="OVx-Vw-hMN" kind="relationship" relationship="window.shadowedContentViewController" id="hwy-oJ-Ebt"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="233.5"/>
+        </scene>
+        <!--Alert Controller-->
+        <scene sceneID="nyq-7x-OOH">
+            <objects>
+                <viewController storyboardIdentifier="Alert" id="Ker-1r-RAc" customClass="AlertController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="BjO-os-WVn">
+                        <rect key="frame" x="0.0" y="0.0" width="233" height="125"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="59N-MT-n3c">
+                                <rect key="frame" x="70" y="81" width="92" height="20"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Time is up." id="RcG-Ze-9X5">
+                                    <font key="font" metaFont="systemBold" size="17"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNQ-gq-QDc">
+                                <rect key="frame" x="90" y="25" width="53" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="r3y-vg-ecl">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="OK:" target="Ker-1r-RAc" id="RJv-fq-6d2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="gw1-aS-27F" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="601"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="Xot-zx-6wb">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="0" tabStyle="toolbar" id="OVx-Vw-hMN" customClass="TabViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem label="Stopwatch" identifier="" image="clock" catalog="system" id="77p-dC-xNs"/>
+                        <tabViewItem label="Timer" identifier="" image="timer" catalog="system" id="a4s-sc-mo6"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="Og6-9O-8ol">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="203"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="OVx-Vw-hMN" id="FHD-yw-8cB"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="Og6-9O-8ol" id="0ge-e8-bUa"/>
+                        <segue destination="zsM-zR-TtT" kind="relationship" relationship="tabItems" id="vGd-ze-W49"/>
+                        <segue destination="wak-hB-94Q" kind="relationship" relationship="tabItems" id="ox1-59-l3j"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="DpD-wB-hRO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="251.5"/>
+        </scene>
+        <!--Clock-->
+        <scene sceneID="wIX-x3-qHP">
+            <objects>
+                <viewController title="Clock" id="zsM-zR-TtT" customClass="StopwatchController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="ZbS-I4-WQt">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="207"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hjs-3Y-lEc">
+                                <rect key="frame" x="0.0" y="-20" width="450" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <box focusRingType="none" fixedFrame="YES" boxType="custom" borderType="line" borderWidth="4" cornerRadius="37" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="lsX-ta-dft">
+                                        <rect key="frame" x="110" y="51" width="76" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" id="K8q-hD-1Lp">
+                                            <rect key="frame" x="4" y="4" width="68" height="68"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box focusRingType="none" fixedFrame="YES" boxType="custom" borderType="line" borderWidth="4" cornerRadius="31" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="oxx-eD-gAd">
+                                                    <rect key="frame" x="4" y="4" width="60" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <view key="contentView" id="H72-ge-fqH">
+                                                        <rect key="frame" x="4" y="4" width="52" height="52"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <button wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K2V-1p-E4g">
+                                                                <rect key="frame" x="-11" y="-11" width="75" height="74"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <buttonCell key="cell" type="bevel" title="Start" bezelStyle="rounded" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="vf9-ZE-D64">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="activate:" target="zsM-zR-TtT" id="K13-Nl-FFz"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <color key="borderColor" red="0.12549019610000001" green="0.20000000000000001" blue="0.1333333333" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <color key="fillColor" name="GreenStart"/>
+                                                </box>
+                                            </subviews>
+                                        </view>
+                                        <color key="borderColor" name="GreenStart"/>
+                                        <color key="fillColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </box>
+                                    <box focusRingType="none" fixedFrame="YES" boxType="custom" borderType="line" borderWidth="4" cornerRadius="37" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="v0S-iv-OZt">
+                                        <rect key="frame" x="265" y="51" width="76" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" id="606-Zm-HKF">
+                                            <rect key="frame" x="4" y="4" width="68" height="68"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box focusRingType="none" fixedFrame="YES" boxType="custom" borderType="line" borderWidth="4" cornerRadius="31" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="KAI-pc-WSJ">
+                                                    <rect key="frame" x="4" y="4" width="60" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <view key="contentView" id="zYu-Lq-5YU">
+                                                        <rect key="frame" x="4" y="4" width="52" height="52"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <button wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sr7-V8-G2i">
+                                                                <rect key="frame" x="-12" y="-10" width="77" height="72"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <buttonCell key="cell" type="bevel" title="Reset" bezelStyle="rounded" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="Zme-hY-DXF">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="deleteTimer:" target="zsM-zR-TtT" id="RYx-cP-3tU"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <color key="borderColor" red="0.12549019610000001" green="0.20000000000000001" blue="0.1333333333" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <color key="fillColor" name="OrangeReset"/>
+                                                </box>
+                                            </subviews>
+                                        </view>
+                                        <color key="borderColor" name="OrangeReset"/>
+                                        <color key="fillColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </box>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Aa-VY-Utt">
+                                        <rect key="frame" x="18" y="135" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" refusesFirstResponder="YES" alignment="center" title="0:00,00" id="aov-uo-eY0">
+                                            <font key="font" metaFont="system" size="61"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                        </subviews>
+                    </view>
+                    <touchBar key="touchBar" id="gmo-ci-1Ye">
+                        <touchBarItems>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="Bjw-JV-rTL"/>
+                            <touchBarItem id="2aO-Jw-yn4">
+                                <viewController key="viewController" id="huD-Uj-AZZ">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DP1-WM-Us0">
+                                        <rect key="frame" x="7" y="-5" width="90" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Start/Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5w0-Wb-96Y">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="action:" target="rT3-3L-HNl" id="eFA-dq-BA7"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarItem id="3WB-Io-BGg">
+                                <viewController key="viewController" id="xYe-Sn-ckS">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iiS-yj-hPy">
+                                        <rect key="frame" x="7" y="-5" width="72" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ajn-Lb-g3u">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="reset:" target="rT3-3L-HNl" id="1rb-X9-k7V"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="PJN-Ce-21e"/>
+                        </touchBarItems>
+                    </touchBar>
+                    <connections>
+                        <outlet property="actionButton" destination="K2V-1p-E4g" id="vTl-N9-GfC"/>
+                        <outlet property="btnActionBorder" destination="oxx-eD-gAd" id="TWh-z8-McL"/>
+                        <outlet property="btnActionFill" destination="lsX-ta-dft" id="HVr-Da-QHT"/>
+                        <outlet property="timerLabel" destination="4Aa-VY-Utt" id="JXf-2B-wpZ"/>
+                    </connections>
+                </viewController>
+                <customObject id="rT3-3L-HNl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1240" y="96.5"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="hoc-IA-Qtv">
+            <objects>
+                <viewController title="Timer" id="wak-hB-94Q" customClass="TimerController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="WmW-My-LbV">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="187"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yTg-hs-54Y">
+                                <rect key="frame" x="0.0" y="-20" width="450" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YH7-D6-bXj">
+                                        <rect key="frame" x="230" y="78" width="211" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" refusesFirstResponder="YES" alignment="center" title="0:00" id="Zfl-bl-LUt">
+                                            <font key="font" metaFont="system" size="61"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <box focusRingType="none" fixedFrame="YES" boxType="custom" borderType="line" borderWidth="4" cornerRadius="37" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="DYO-aN-Bsy">
+                                        <rect key="frame" x="28" y="54" width="76" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" id="ZRK-Jp-lbL">
+                                            <rect key="frame" x="4" y="4" width="68" height="68"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box focusRingType="none" fixedFrame="YES" boxType="custom" borderType="line" borderWidth="4" cornerRadius="31" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="b51-gI-6q0">
+                                                    <rect key="frame" x="4" y="4" width="60" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <view key="contentView" id="Uik-rD-n4Z">
+                                                        <rect key="frame" x="4" y="4" width="52" height="52"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <button wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u03-8v-V4V">
+                                                                <rect key="frame" x="-11" y="-12" width="75" height="76"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <buttonCell key="cell" type="bevel" title="Start" bezelStyle="rounded" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="tZs-6c-gnO">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="action:" target="wak-hB-94Q" id="JU6-2B-BID"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <color key="borderColor" red="0.12549019607843137" green="0.20000000000000001" blue="0.13333333333333333" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <color key="fillColor" name="GreenStart"/>
+                                                </box>
+                                            </subviews>
+                                        </view>
+                                        <color key="borderColor" name="GreenStart"/>
+                                        <color key="fillColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </box>
+                                    <box focusRingType="none" fixedFrame="YES" boxType="custom" borderType="line" borderWidth="4" cornerRadius="37" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="1Yo-Im-YGO">
+                                        <rect key="frame" x="124" y="54" width="76" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" id="NUQ-XO-XUd">
+                                            <rect key="frame" x="4" y="4" width="68" height="68"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <box focusRingType="none" fixedFrame="YES" boxType="custom" borderType="line" borderWidth="4" cornerRadius="31" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="oJ2-Pd-aJS">
+                                                    <rect key="frame" x="4" y="4" width="60" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <view key="contentView" id="67k-wJ-YLJ">
+                                                        <rect key="frame" x="4" y="4" width="52" height="52"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <button wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewl-Km-d8d">
+                                                                <rect key="frame" x="-15" y="-11" width="82" height="75"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                                <buttonCell key="cell" type="bevel" title="Reset" bezelStyle="rounded" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="n8q-GQ-Uvn">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <action selector="deactivate:" target="wak-hB-94Q" id="qt6-rH-zwy"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </view>
+                                                    <color key="borderColor" red="0.12549019610000001" green="0.20000000000000001" blue="0.1333333333" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                    <color key="fillColor" name="OrangeReset"/>
+                                                </box>
+                                            </subviews>
+                                        </view>
+                                        <color key="borderColor" name="OrangeReset"/>
+                                        <color key="fillColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </box>
+                                    <textField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DBS-Yy-mjp">
+                                        <rect key="frame" x="41" y="153" width="40" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" refusesFirstResponder="YES" state="on" borderStyle="bezel" title="0" bezelStyle="round" id="yDZ-8q-nkn">
+                                            <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="CU3-8l-WV4"/>
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <action selector="changeMinutes:" target="wak-hB-94Q" id="JqJ-U5-6oV"/>
+                                        </connections>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bdd-oa-I4s">
+                                        <rect key="frame" x="83" y="153" width="32" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="min" id="K7w-Y3-lCI">
+                                            <font key="font" metaFont="system" size="17"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AWo-5B-vRM">
+                                        <rect key="frame" x="123" y="153" width="40" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" refusesFirstResponder="YES" state="on" borderStyle="bezel" title="1" bezelStyle="round" id="mM2-bf-jiQ">
+                                            <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="CWu-mb-2V0"/>
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <action selector="changeSeconds:" target="wak-hB-94Q" id="CqQ-Vd-e5e"/>
+                                        </connections>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QwM-y7-rj2">
+                                        <rect key="frame" x="165" y="153" width="13" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="s" id="P6D-2z-iDK">
+                                            <font key="font" metaFont="system" size="17"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <stepper wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8R-c3-a5W">
+                                        <rect key="frame" x="181" y="150" width="19" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <stepperCell key="cell" continuous="YES" alignment="left" minValue="1" maxValue="1000" doubleValue="1" id="xoR-12-Zjj"/>
+                                        <connections>
+                                            <action selector="stTime:" target="wak-hB-94Q" id="KVU-9v-zQt"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                            </customView>
+                        </subviews>
+                    </view>
+                    <touchBar key="touchBar" id="TZW-Jo-Ose">
+                        <touchBarItems>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="btS-Ow-aQp"/>
+                            <touchBarItem id="Z7E-gH-7JE">
+                                <viewController key="viewController" id="4Ap-Pr-2VB">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mgi-ff-NoX">
+                                        <rect key="frame" x="7" y="-5" width="90" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Start/Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="L1A-JS-aYS">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="action:" target="O4u-AV-few" id="kK1-m5-G3v"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarItem id="ZtP-J8-tAJ">
+                                <viewController key="viewController" id="Uys-WA-zzk">
+                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3jR-5a-sMe">
+                                        <rect key="frame" x="7" y="-5" width="72" height="30"/>
+                                        <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mKQ-HE-zP6">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="reset:" target="O4u-AV-few" id="Aeu-tX-Hdh"/>
+                                        </connections>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
+                            <touchBarSpacerItem identifier="NSTouchBarItemIdentifierFlexibleSpace" id="OJ1-p3-QaM"/>
+                        </touchBarItems>
+                    </touchBar>
+                    <connections>
+                        <outlet property="Countdown" destination="YH7-D6-bXj" id="kCV-YL-m7A"/>
+                        <outlet property="actionButton" destination="u03-8v-V4V" id="FoN-fF-tPt"/>
+                        <outlet property="btnActionBorder" destination="DYO-aN-Bsy" id="d5i-im-gO8"/>
+                        <outlet property="btnActionFill" destination="b51-gI-6q0" id="faE-Mg-fhj"/>
+                        <outlet property="stTime" destination="P8R-c3-a5W" id="Oy4-aJ-3YS"/>
+                        <outlet property="tfMinutes" destination="DBS-Yy-mjp" id="kUc-QQ-Gkx"/>
+                        <outlet property="tfSeconds" destination="AWo-5B-vRM" id="bTm-YG-8ka"/>
+                    </connections>
+                </viewController>
+                <customObject id="O4u-AV-few" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="631.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clock" catalog="system" width="15" height="15"/>
+        <image name="timer" catalog="system" width="15" height="15"/>
+        <namedColor name="GreenStart">
+            <color red="0.125" green="0.83899998664855957" blue="0.094999998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="OrangeReset">
+            <color red="0.70599997043609619" green="0.70599997043609619" blue="0.70599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
